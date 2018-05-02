@@ -1,0 +1,104 @@
+Q1) Given
+
+String s1 = "Hello";
+String s2 = new String("Hello");
+sout("s1 == s2 " + (s1 == s2));
+sout("s1.equals(s2) " + s1.equals(s2));
+
+What happens:
+a) true, true
+b) true, false
+c) false, true
+d) false, false
+
+Q2) Given
+
+Object s1 = new StringBuilder("Hello");
+Object s2 = new String("Hello");
+sout("s1 == s2 " + (s1 == s2));
+sout("s1.equals(s2) " + s1.equals(s2));
+
+What happens:
+a) true, true
+b) true, false
+c) false, true
+d) false, false
+
+Q3) Given
+
+String s1 = "Hello";
+String s2 = "Hello";
+sout("s1 == s2 " + (s1 == s2));
+sout("s1.equals(s2) " + s1.equals(s2));
+
+What happens:
+a) true, true
+b) true, false
+c) false, true
+d) false, false
+
+Q4) Given
+
+Object s1 = new StringBuilder("Hello");
+Object s2 = new StringBuilder("Hello");
+sout("s1 == s2 " + (s1 == s2));
+sout("s1.equals(s2) " + s1.equals(s2));
+
+What happens:
+a) true, true
+b) true, false
+c) false, true
+d) false, false
+
+Q5) Given:
+
+    String s = "Hello";
+
+    How much storage is allocated for s?
+    A) None
+    B) 1 Machine Word
+    C) 6 bytes
+    D) 12 bytes
+
+Q6) Given
+
+  public void q11A(int x) {
+    x = x + 1;
+  }
+
+  int x = 99;
+  q11A(x);
+  System.out.println(x);
+
+  A) 99
+  B) 100
+  C) An error
+
+Q7) Given:
+  public void q12A(StringBuilder x) {
+    x.append(" world");
+  }
+
+  StringBuilder x = new StringBuilder("Hello");
+  q12A(x);
+  System.out.println(x);
+
+What is the result?
+    A) Hello
+    B) Hello world
+    C)  world
+    D) An error
+
+Q8) Given
+  public void q14A(Integer x) {
+    x = x + 1;
+  }
+
+    Integer x = 99;
+    q14A(x);
+    System.out.println(x);
+
+What is the result?
+    A) 99
+    B) 100
+    C) An error
