@@ -163,3 +163,59 @@ What is the result?
     D) Z-Hello, Y-Hello2
     E) Compilation fails
 
+Q12) Given
+
+  class Base2 {
+    void doBaseStuff() { System.out.println("doBaseStuff");  }
+  }
+
+  class Sub2 extends Base2 {
+    void doBaseStuff(int x) { System.out.println("doSubStuff"); }
+  }
+
+    A) doBaseStuff in Base2 can be marked public without causing errors
+    B) doBaseStuff in Base2 can be marked private without causing errors
+    C) doBaseStuff in Sub2 can be marked public without causing errors
+    D) doBaseStuff in Sub2 can be marked protected without causing errors
+    E) doBaseStuff in Sub2 can be marked private without causing errors
+
+Q13) Given
+
+  class Base2 {
+    void doBaseStuff() { System.out.println("doBaseStuff");  }
+  }
+
+  class Sub2 extends Base2 {
+    void doBaseStuff() { System.out.println("doSubStuff"); }
+  }
+
+    A) doBaseStuff in Base2 can be marked public without causing errors
+    B) doBaseStuff in Base2 can be marked private without causing errors
+    C) doBaseStuff in Sub2 can be marked public without causing errors
+    D) doBaseStuff in Sub2 can be marked protected without causing errors
+    E) doBaseStuff in Sub2 can be marked private without causing errors
+
+Q14) Assume Base and Sub have the implied relationship
+
+  public void q17() {
+    Base b = new Sub();
+    ((StringBuilder)b).concat("x");
+
+    What is the result?
+    A) doSubStuff
+    B) doOtherStuff
+    C) doBaseStuff
+    D) Exception at runtime
+    E) Compilation failure
+
+Q15) Assuming Base and Sub are classes with the implied relationship...
+
+    Base b = new Sub();
+    ((Sub)b).doOtherStuff();
+
+    What is the result?
+    A) doSubStuff
+    B) doOtherStuff
+    C) doBaseStuff
+    D) Exception at runtime
+    E) Compilation failure
