@@ -102,3 +102,135 @@ What is the result?
     A) 99
     B) 100
     C) An error
+
+Q9) Given
+
+  public void q13A(int[] x) {
+    x[0] = x[0] + 1;
+  }
+
+  int x[] = {99};
+  q13A(x);
+  System.out.println(x[0]);
+
+What is the result?
+    A) 99
+    B) 100
+    C) An error
+
+Q10) Given:
+
+  class X {
+    static int MAX_VAL = 100;
+    int value = 99;
+    public void setVal(int x) {
+      if (x <= MAX_VAL) value = x;
+    }
+  }
+  X a = new X();
+  X b = new X();
+  a.setVal(120);
+  System.out.print(a.value + ", ");
+  b.MAX_VAL = 150;
+  a.setVal(140);
+  System.out.println(a.value);
+
+What is the result?
+    A) 99, 99
+    B) 120, 140
+    C) 99, 140
+    D) Compilation failure
+    E) Exception at runtime
+
+Q11) Given
+
+  class Y {
+    static String sayHi() { return "Y-Hello"; }
+    String sayHi2() {  return "Y-Hello2"; }
+  }
+  class Z extends Y {
+    static String sayHi() { return "Z-Hello"; }
+    String sayHi2() { return "Z-Hello2"; }
+  }
+
+  Y y = new Z();
+  System.out.println(y.sayHi() + ", " + y.sayHi2());
+
+What is the result?
+    A) Y-Hello, Y-Hello2
+    B) Y-Hello, Z-Hello2
+    C) Z-Hello, Z-Hello2
+    D) Z-Hello, Y-Hello2
+    E) Compilation fails
+
+Q12) Given
+
+  class Base2 {
+    void doBaseStuff() { System.out.println("doBaseStuff");  }
+  }
+
+  class Sub2 extends Base2 {
+    void doBaseStuff(int x) { System.out.println("doSubStuff"); }
+  }
+
+    A) doBaseStuff in Base2 can be marked public without causing errors
+    B) doBaseStuff in Base2 can be marked private without causing errors
+    C) doBaseStuff in Sub2 can be marked public without causing errors
+    D) doBaseStuff in Sub2 can be marked protected without causing errors
+    E) doBaseStuff in Sub2 can be marked private without causing errors
+
+Q13) Given
+
+  class Base2 {
+    void doBaseStuff() { System.out.println("doBaseStuff");  }
+  }
+
+  class Sub2 extends Base2 {
+    void doBaseStuff() { System.out.println("doSubStuff"); }
+  }
+
+    A) doBaseStuff in Base2 can be marked public without causing errors
+    B) doBaseStuff in Base2 can be marked private without causing errors
+    C) doBaseStuff in Sub2 can be marked public without causing errors
+    D) doBaseStuff in Sub2 can be marked protected without causing errors
+    E) doBaseStuff in Sub2 can be marked private without causing errors
+
+Q14) Assume Base and Sub have the implied relationship
+
+  public void q17() {
+    Base b = new Sub();
+    ((StringBuilder)b).concat("x");
+
+    What is the result?
+    A) doSubStuff
+    B) doOtherStuff
+    C) doBaseStuff
+    D) Exception at runtime
+    E) Compilation failure
+
+Q15) Assuming Base and Sub are classes with the implied relationship...
+
+    Base b = new Sub();
+    ((Sub)b).doOtherStuff();
+
+    What is the result?
+    A) doSubStuff
+    B) doOtherStuff
+    C) doBaseStuff
+    D) Exception at runtime
+    E) Compilation failure
+
+Q16)
+  class Base {
+    void doBaseStuff() {System.out.println("doBaseStuff");}
+  }
+  class Sub extends Base {
+    void doBaseStuff() {System.out.println("doSubStuff");}
+  }
+
+A) doBaseStuff in Base can be marked throws Exception without causing errors
+B) doBaseStuff in Base can be marked throws RuntimeException without causing errors
+C) doBaseStuff in Sub can be marked throws Exception without causing errors
+D) doBaseStuff in Sub can be marked throws RuntimeException without causing errors
+E) if doBaseStuff in Base were marked throws Exception,
+   then doBaseStuff in Sub can be marked throws IOException without causing errors
